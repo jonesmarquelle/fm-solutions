@@ -10,15 +10,12 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 - [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
 ### Screenshot
 
-![](./images/screenshot.jpg)
+![screenshot](https://github.com/jonesmarquelle/frontendmentor-io-solutions/assets/30931839/b357c5b6-c64a-4102-8825-b0dee8e74bee)
 
 ### Links
 
@@ -34,6 +31,4 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@jonesmarquelle](https://www.frontendmentor.io/profile/jonesmarquelle)
