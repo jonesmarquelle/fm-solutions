@@ -27,11 +27,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![calculator_screenshot](https://github.com/jonesmarquelle/fm-solutions/assets/30931839/9fb2ce20-0b77-4e3d-a627-ec6d16f9e7b1)
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: (https://jonesmarquelle.github.io/fm-solutions/calculator-app-main/dist/index.html)
 
 ## My process
 
