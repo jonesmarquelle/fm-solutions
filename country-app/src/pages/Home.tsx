@@ -176,7 +176,7 @@ function Home({ setSelectedCode, setLookup }: { setSelectedCode: (country: strin
                     }} />
             </div>
 
-            <div className='flex flex-wrap box-border justify-center sm:justify-start gap-16 h-full w-fit mr-auto overflow-y-auto'>
+            <div className='flex flex-wrap box-border justify-center sm:justify-start gap-20 h-full w-fit mr-auto overflow-y-auto'>
                 {displayedCountries.map(country =>
                     <CountryCard
                         className='interactive-component hover:shadow-2xl transition-shadow duration-500'

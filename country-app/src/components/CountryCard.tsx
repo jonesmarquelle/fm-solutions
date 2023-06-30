@@ -21,7 +21,7 @@ const CountryCard: React.FC<CountryCardProps> = ({ country, className, onClick }
         onClick(country);
     }
     return (
-        <div className={`flex flex-col gap-5 overflow-hidden items-start h-80 w-80 bg-elementPrimary dark:bg-elementPrimary-dark text-textPrimary dark:text-textPrimary-dark ${className}`}
+        <div className={`flex flex-col gap-5 overflow-hidden items-start h-80 w-64 bg-elementPrimary dark:bg-elementPrimary-dark text-textPrimary dark:text-textPrimary-dark ${className}`}
             onClick={handleClick}>
             <img className='h-1/2 min-w-full object-cover' src={country.flagUrl} />
             <p className='font-bold text-md w-full px-4 text-start truncate'>{country.name}</p>
