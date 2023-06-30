@@ -17,6 +17,7 @@ interface CountryCardProps {
 const CountryCard: React.FC<CountryCardProps> = ({ country, className, onClick }) => {
     const handleClick = () => {
         if (!onClick) return;
+        console.log(country);
         onClick(country);
     }
     return (

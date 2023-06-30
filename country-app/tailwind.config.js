@@ -8,8 +8,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: (theme) => ({
-        'search-icon': "url('./assets/search-icon.svg')", //#858585
-        'search-icon-dark': "url('./assets/search-icon-dark.svg')", //'white'
+        'search-icon': "url('../images/search-icon.svg')", //#858585
+        'search-icon-dark': "url('../images/search-icon-dark.svg')", //'white'
       }),
 
       colors: {

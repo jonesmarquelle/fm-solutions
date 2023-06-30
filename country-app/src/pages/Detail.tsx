@@ -15,8 +15,8 @@ const Detail: React.FC<DetailProps> = ({className, country, setSelectedCode}) =>
                 onClick={() => setSelectedCode(undefined)}>
                     <span className='absolute -top-1 left-4 text-3xl h-6 text-start'>←</span> Back
                 </button>
-                <div className='flex flex-col lg:flex-row lg:gap-24'>
-                    <img className='component w-full lg:w-[43%] 2xl:w-[560px] aspect-[560/400]' src={country.flagUrl}/>
+                <div className='flex flex-col lg:flex-row items-center lg:gap-24'>
+                    <img className='component w-full lg:w-[43%] object-contain h-fit' src={country.flagUrl}/>
                     <div className='flex flex-col w-full text-sm text-start gap-6 py-12'>
                         <h3 className='text-lg font-bold text-start'>{country.name}</h3>
                         <div className='flex flex-col lg:flex-row w-full gap-8'>

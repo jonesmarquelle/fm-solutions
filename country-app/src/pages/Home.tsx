@@ -65,30 +65,37 @@ const fetchCountries = async (): Promise<Country[]> => {
     return fetch('https://restcountries.com/v3.1/all')
         .then(res => res.json())
         .then(countriesRes => countriesRes.map((country: any): Country => {
+            console.log(country)
             return {
                 name: country.name.common,
-                alpha3Code: country.alpha3Code,
+                alpha3Code: country.cca3,
                 flagUrl: country.flags.png,
                 population: country.population.toLocaleString(),
                 region: country.region as Region,
                 capital: country.capital,
                 subregion: country.subregion,
-                nativeName: country.nativeName,
-                tld: country.topLevelDomain,
-                currencies: country.currencies.map((c: { name: string, symbol: string }) => `${c.name}(${c.symbol})`),
-                languages: country.languages.map((l: { name: string }) => l.name),
+                nativeName: country.name.nativeName?.common,
+                tld: country.tld?.[0],
+                currencies: Object.keys(country.currencies ?? []).map((key: string) => {
+                    const {name, symbol} = country.currencies[key];
+                    return `${name}(${symbol})`;
+                }),
+                languages: Object.values(country.languages ?? []),
                 borders: country.borders,
             }
         }))
         .then((cList: Country[]) => buildLinkedCountries(cList, buildLookup(cList)))
-        .catch(_ => spoofCountries());
+        .catch(e => {
+            console.log(e)
+            return spoofCountries()
+        });
 }
 
 function Home({ setSelectedCode, setLookup }: { setSelectedCode: (country: string) => void, setLookup: (map: Map<string, Country>) => void }) {
     const [countries, setCountries] = useState<Country[]>([]);
     useEffect(() => {
         const updateCountries = async () => {
-            const newCountries = await fetchCountries();//import.meta.env.DEV ? spoofCountries() : await fetchCountries();
+            const newCountries = (await fetchCountries());//import.meta.env.DEV ? spoofCountries() : await fetchCountries();
             setCountries(newCountries);
         }
         updateCountries();
