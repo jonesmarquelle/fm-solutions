@@ -12,8 +12,6 @@ This is a solution to the [REST Countries API with color theme switcher challeng
   - [Built with](#built-with)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -28,6 +26,8 @@ Users should be able to:
 - Toggle the color scheme between light and dark mode *(optional)*
 
 ### Screenshot
+
+![countries_screenshot](https://github.com/jonesmarquelle/fm-solutions/assets/30931839/31887d1c-92d7-4ed1-b231-d34c7ab24cc8)
 
 ### Links
 
