@@ -30,7 +30,7 @@ const buildLookup = (countries: Country[]): Map<string, Country> => {
 const buildLinkedCountries = (countries: Country[], lookup: Map<string, Country>): Country[] => {
     return countries.map((c) => {
         return {
-            ...c, 
+            ...c,
             borderCountries: c.borders?.reduce((prev: Country[], c_code: string): Country[] => {
                 const findCountry = lookup.get(c_code);
                 if (!findCountry) return prev;
@@ -42,58 +42,58 @@ const buildLinkedCountries = (countries: Country[], lookup: Map<string, Country>
 
 const spoofCountries = (): Country[] => {
     const countriesResult = countriesData.map((country: any): Country => {
-      return {
-        name: country.name,
-        alpha3Code: country.alpha3Code,
-        flagUrl: './src/assets/chopper.jpg',
-        population: country.population.toLocaleString(),
-        region: country.region as Region,
-        capital: country.capital,
-        subregion: country.subregion,
-        nativeName: country.nativeName,
-        tld: country.topLevelDomain,
-        currencies: country.currencies?.map((c: {name: string, symbol: string}) => `${c.name} (${c.symbol})`),
-        languages: country.languages?.map((l: {name: string}) => l.name),
-        borders: country.borders
-      }
-    });
-    
-    return buildLinkedCountries(countriesResult, buildLookup(countriesResult));
-  }
-  
-const fetchCountries = async (): Promise<Country[]> => {
-    return fetch('https://restcountries.com/v3.1/all')
-    .then(res => res.json())
-    .then(countriesRes => countriesRes.map((country: any): Country => {
         return {
-            name: country.name.common,
+            name: country.name,
             alpha3Code: country.alpha3Code,
-            flagUrl: country.flags.png,
+            flagUrl: './src/assets/chopper.jpg',
             population: country.population.toLocaleString(),
             region: country.region as Region,
             capital: country.capital,
             subregion: country.subregion,
             nativeName: country.nativeName,
             tld: country.topLevelDomain,
-            currencies: country.currencies.map((c: {name: string, symbol: string}) => `${c.name}(${c.symbol})`),
-            languages: country.languages.map((l: {name: string}) => l.name),
-            borders: country.borders,
+            currencies: country.currencies?.map((c: { name: string, symbol: string }) => `${c.name} (${c.symbol})`),
+            languages: country.languages?.map((l: { name: string }) => l.name),
+            borders: country.borders
         }
-    }))
-    .then((cList: Country[]) => buildLinkedCountries(cList, buildLookup(cList)))
-    .catch(_ => spoofCountries());
+    });
+
+    return buildLinkedCountries(countriesResult, buildLookup(countriesResult));
 }
 
-function Home({setSelectedCode, setLookup}: {setSelectedCode: (country: string) => void, setLookup: (map: Map<string, Country>) => void}) {
+const fetchCountries = async (): Promise<Country[]> => {
+    return fetch('https://restcountries.com/v3.1/all')
+        .then(res => res.json())
+        .then(countriesRes => countriesRes.map((country: any): Country => {
+            return {
+                name: country.name.common,
+                alpha3Code: country.alpha3Code,
+                flagUrl: country.flags.png,
+                population: country.population.toLocaleString(),
+                region: country.region as Region,
+                capital: country.capital,
+                subregion: country.subregion,
+                nativeName: country.nativeName,
+                tld: country.topLevelDomain,
+                currencies: country.currencies.map((c: { name: string, symbol: string }) => `${c.name}(${c.symbol})`),
+                languages: country.languages.map((l: { name: string }) => l.name),
+                borders: country.borders,
+            }
+        }))
+        .then((cList: Country[]) => buildLinkedCountries(cList, buildLookup(cList)))
+        .catch(_ => spoofCountries());
+}
+
+function Home({ setSelectedCode, setLookup }: { setSelectedCode: (country: string) => void, setLookup: (map: Map<string, Country>) => void }) {
     const [countries, setCountries] = useState<Country[]>([]);
     useEffect(() => {
         const updateCountries = async () => {
-            const newCountries = import.meta.env.DEV ? spoofCountries() : await fetchCountries();
+            const newCountries = await fetchCountries();//import.meta.env.DEV ? spoofCountries() : await fetchCountries();
             setCountries(newCountries);
         }
         updateCountries();
     }, []);
-    
+
     useEffect(() => {
         setLookup(buildLookup(countries))
     }, [countries])
@@ -170,12 +170,12 @@ function Home({setSelectedCode, setLookup}: {setSelectedCode: (country: string) 
             </div>
 
             <div className='flex flex-wrap box-border justify-center sm:justify-start gap-16 h-full w-fit mr-auto overflow-y-auto'>
-                {displayedCountries.map(country => 
-                    <CountryCard 
-                    className='interactive-component hover:shadow-2xl transition-shadow duration-500' 
-                    key={country.name} 
-                    country={country} 
-                    onClick={c => setSelectedCode(c.alpha3Code)}/>
+                {displayedCountries.map(country =>
+                    <CountryCard
+                        className='interactive-component hover:shadow-2xl transition-shadow duration-500'
+                        key={country.name}
+                        country={country}
+                        onClick={c => setSelectedCode(c.alpha3Code)} />
                 )}
             </div>
         </>
