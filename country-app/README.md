@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![countries-screenshot](https://github.com/jonesmarquelle/fm-solutions/assets/30931839/fd79b7b1-6017-4d48-a32f-35b3184253af)
+![countries_screenshot](https://github.com/jonesmarquelle/fm-solutions/assets/30931839/0d720ba1-bbf7-422c-8fe5-da923cc04b42)
 
 ### Links
 
