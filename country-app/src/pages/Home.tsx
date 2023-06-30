@@ -45,7 +45,7 @@ const spoofCountries = (): Country[] => {
         return {
             name: country.name,
             alpha3Code: country.alpha3Code,
-            flagUrl: './src/assets/chopper.jpg',
+            flagUrl: './images/chopper.jpg',
             population: country.population.toLocaleString(),
             region: country.region as Region,
             capital: country.capital,
