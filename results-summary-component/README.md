@@ -10,11 +10,7 @@ This is a solution to the [Results summary component challenge on Frontend Mento
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -27,7 +23,8 @@ Users should be able to:
 
 ### Screenshot
 
-
+![results-light](https://github.com/jonesmarquelle/fm-solutions/assets/30931839/32fa90c1-1d02-444d-a92d-b1e97f1979ed)
+![results-dark](https://github.com/jonesmarquelle/fm-solutions/assets/30931839/54cf64ef-5591-4644-86b4-a3fd93f1fbd0)
 
 ### Links
 
