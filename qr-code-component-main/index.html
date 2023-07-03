@@ -1,101 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
-  <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | QR code component</title>
 
-  <title>Frontend Mentor | QR code component</title>
-  
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
 
-    .body {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      background-color: hsl(212, 45%, 89%);
-    }
+      .body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: hsl(212, 45%, 89%);
+      }
 
-    .card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding:15px;
-      border-radius: 18px;
-      gap: 22px;
-      width: 292px;
-      height: 470px;
-      background-color: hsl(0, 0%, 100%);
-      box-shadow: 0 4px 8px 0 hsl(218, 44%, 22%)/20, 0 6px 20px 0 hsl(218, 44%, 22%)/19;
-    }
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        border-radius: 18px;
+        gap: 22px;
+        width: 292px;
+        height: 470px;
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 4px 8px 0 hsl(218, 44%, 22%) / 20,
+          0 6px 20px 0 hsl(218, 44%, 22%) / 19;
+      }
 
-    .qr {
-      border-radius: 5%;
-      width: 100%;
-      aspect-ratio: 1 / 1;
-    }
+      .qr {
+        border-radius: 5%;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+      }
 
-    h1, h2 {
-      margin: 0;
-    }
-    h1 {
-      color: hsl(218, 44%, 22%);
-      font-family: 'Outfit', sans-serif;
-      font-weight: 700;
-      font-size: 1.3em;
-      width: 90%;
-      text-align: center;
-    }
+      h1,
+      h2 {
+        margin: 0;
+      }
+      h1 {
+        color: hsl(218, 44%, 22%);
+        font-family: "Outfit", sans-serif;
+        font-weight: 700;
+        font-size: 1.3em;
+        width: 90%;
+        text-align: center;
+      }
 
-    h2 {
-      color: hsl(220, 15%, 55%);
-      font-family: 'Outfit', sans-serif;
-      font-weight: 400;
-      font-size: 15px;
-      width: 80%;
-      text-align: center;
-    }
+      h2 {
+        color: hsl(220, 15%, 55%);
+        font-family: "Outfit", sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        width: 80%;
+        text-align: center;
+      }
+    </style>
+  </head>
 
-  </style>
-</head>
+  <body class="body">
+    <div class="card">
+      <img class="qr" src="./images/image-qr-code.png" />
+      <h1>Improve your front-end skills by building projects</h1>
+      <h2>
+        Scan the QR code to visit Frontend Mentor and take your coding skills to
+        the next level
+      </h2>
+    </div>
 
-<body class="body">
-  <div class="card">
-    <img class="qr" src="./images/image-qr-code.png" />
-    <h1>
-      Improve your front-end skills by building projects
-    </h1>
-    <h2>
-      Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-    </h2>
-  </div>
-
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://github.com/jonesmarquelle">marquelle</a>.
-  </div>
-</body>
-
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/jonesmarquelle">marquelle</a>.
+    </div>
+  </body>
 </html>
